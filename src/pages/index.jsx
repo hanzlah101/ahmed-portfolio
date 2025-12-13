@@ -6,7 +6,7 @@ import AnimatedText from "../components/AnimatedText"
 import Link from "next/link"
 import { LinkArrow } from "../components/Icons"
 import Hireme from "../components/Hireme"
-import ProfilePic from "../../public/images/profile/profile1.png"
+import ProfilePic from "../../public/images/profile/me-hero.png"
 import BulbImg from "../../public/images/bulb_image.svg"
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 lg:w-[70%] lg:inline-block md:w-full">
+            <div className="w-[44%] lg:w-[70%] lg:inline-block md:w-full">
               <Image
                 src={ProfilePic}
                 alt="profile_image"
