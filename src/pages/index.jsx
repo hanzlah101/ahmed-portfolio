@@ -45,7 +45,7 @@ export default function Home() {
 
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 A passionate and results-oriented Full Stack Web Developer with
-                over 2 years of professional experience. I specialize in
+                over 3.5 years of professional experience. I specialize in
                 creating scalable web architectures, integrating complex APIs,
                 implementing modern UI/UX principles, and delivering
                 production-ready web applications. Explore my latest projects
