@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import Head from "next/head";
-import AnimatedText from "../components/AnimatedText";
-import Layout from "../components/Layout";
-import Link from "next/link";
-import TransitionEffect from "../components/TransitionEffect";
-import emailjs from "@emailjs/browser";
-import Toast from "../components/Toast";
+import { useEffect, useRef, useState } from "react"
+import Head from "next/head"
+import AnimatedText from "../components/AnimatedText"
+import Layout from "../components/Layout"
+import Link from "next/link"
+import TransitionEffect from "../components/TransitionEffect"
+import emailjs from "@emailjs/browser"
+import Toast from "../components/Toast"
 
 const Card = ({ icon, title, contact, text, href }) => {
   return (
@@ -42,21 +42,21 @@ const Card = ({ icon, title, contact, text, href }) => {
         </svg>
       </div>
     </Link>
-  );
-};
+  )
+}
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [showToast, setShowToast] = useState(false)
 
-  const form = useRef();
+  const form = useRef()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault()
+    setIsLoading(true)
 
     emailjs
       .sendForm(
@@ -67,37 +67,37 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          setShowToast(true);
-          setName("");
-          setEmail("");
-          setMessage("");
+          console.log(result.text)
+          setShowToast(true)
+          setName("")
+          setEmail("")
+          setMessage("")
         },
         (error) => {
-          console.log(error.text);
-          alert(error.text);
+          console.log(error.text)
+          alert(error.text)
         }
       )
       .finally(() => {
-        setIsLoading(false);
-      });
-  };
+        setIsLoading(false)
+      })
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowToast(false);
-    }, 4000);
+      setShowToast(false)
+    }, 4000)
 
-    return () => clearTimeout(timer);
-  }, [showToast]);
+    return () => clearTimeout(timer)
+  }, [showToast])
 
   return (
     <>
       <Head>
-        <title>Hanzlah&apos;s Portfolio | Contact</title>
+        <title>Ahmad Hamza&apos;s Portfolio | Contact</title>
         <meta
           name="description"
-          content="Contact me for any kind of project."
+          content="Contact Ahmad Hamza for any web development project."
         />
       </Head>
 
@@ -124,9 +124,9 @@ const Contact = () => {
               <div className="flex flex-col gap-y-6 md:mt-12 mt-6">
                 <Card
                   title={"Email"}
-                  contact={"hanzlahjavaid101@gmail.com"}
+                  contact={"ahmaddev4u@gmail.com"}
                   text={"Write Me"}
-                  href={"mailto:hanzlahjavaid101@gmail.com"}
+                  href={"mailto:ahmaddev4u@gmail.com"}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -142,10 +142,10 @@ const Contact = () => {
                 />
 
                 <Card
-                  title={"Messenger"}
-                  contact={"hanzlahjavaid101@gmail.com"}
-                  text={"Write Me"}
-                  href={"http://m.me/100092311505914"}
+                  title={"Phone"}
+                  contact={"+92 326 6261570"}
+                  text={"Call Me"}
+                  href={"tel:+923266261570"}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ const Contact = () => {
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
-                      <path d="M12 3c-4.92 0-8.91 3.729-8.91 8.332 0 2.616 1.291 4.952 3.311 6.479V21l3.041-1.687c.811.228 1.668.35 2.559.35 4.92 0 8.91-3.73 8.91-8.331C20.91 6.729 16.92 3 12 3zm.938 11.172-2.305-2.394-4.438 2.454 4.865-5.163 2.305 2.395 4.439-2.455-4.866 5.163z"></path>
+                      <path d="M17.5 2C16.671 2 16 2.671 16 3.5v17c0 .829.671 1.5 1.5 1.5s1.5-.671 1.5-1.5v-17C19 2.671 18.329 2 17.5 2zM12 4c-.552 0-1 .448-1 1v14c0 .552.448 1 1 1s1-.448 1-1V5C13 4.448 12.552 4 12 4zM6.5 6C5.671 6 5 6.671 5 7.5v9c0 .829.671 1.5 1.5 1.5S8 17.329 8 16.5v-9C8 6.671 7.329 6 6.5 6z"></path>
                     </svg>
                   }
                 />
@@ -254,7 +254,7 @@ const Contact = () => {
         </Layout>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

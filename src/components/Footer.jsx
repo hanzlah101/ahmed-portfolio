@@ -1,6 +1,6 @@
-import React from "react";
-import Layout from "./Layout";
-import Link from "next/link";
+import React from "react"
+import Layout from "./Layout"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           </span>
           By
           <span className="underline underline-offset-2 cursor-pointer">
-            Hanzlah Javaid
+            Ahmad Hamza
           </span>
         </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
         </Link>
       </Layout>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

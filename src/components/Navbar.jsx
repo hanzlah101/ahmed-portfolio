@@ -1,27 +1,19 @@
-import { useState } from "react";
-import Link from "next/link";
-import Logo from "./Logo";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import {
-  InstagramIcon,
-  GithubIcon,
-  LinkedInIcon,
-  MoonIcon,
-  RedditIcon,
-  SunIcon,
-  FacebookIcon,
-} from "./Icons";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useState } from "react"
+import Link from "next/link"
+import Logo from "./Logo"
+import { useRouter } from "next/router"
+import { motion } from "framer-motion"
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons"
+import useThemeSwitcher from "./hooks/useThemeSwitcher"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [mode, setMode] = useThemeSwitcher();
-  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false)
+  const [mode, setMode] = useThemeSwitcher()
+  const router = useRouter()
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   const CostomLink = ({ href, title, className = "" }) => (
     <Link href={href} className={`${className} relative group`}>
@@ -34,13 +26,13 @@ const Navbar = () => {
         &nbsp;
       </span>
     </Link>
-  );
+  )
 
   const CostomMobileLink = ({ href, title, className = "", toggle }) => (
     <button
       onClick={() => {
-        toggle();
-        router.push(href);
+        toggle()
+        router.push(href)
       }}
       href={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
@@ -54,7 +46,7 @@ const Navbar = () => {
         &nbsp;
       </span>
     </button>
-  );
+  )
 
   return (
     <header className="w-full z-10 relative dark:text-light px-32 py-8 lg:px-16 md:px-12 sm:px-8 font-medium flex items-center justify-between">
@@ -89,46 +81,17 @@ const Navbar = () => {
 
         <nav className="flex items-center flex-wrap">
           <motion.a
-            href={"https://www.facebook.com/profile.php?id=100092311505914"}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 mr-3"
-          >
-            <FacebookIcon />
-          </motion.a>
-
-          <motion.a
-            href={"https://www.linkedin.com/in/hanzlah-javaid-43549126b/"}
+            href={"https://www.linkedin.com/in/ahmad-hamza-723629258/"}
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
+            className="w-6 mr-3"
           >
             <LinkedInIcon />
           </motion.a>
 
           <motion.a
-            href={"https://www.instagram.com/hanzlah_101/"}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <InstagramIcon />
-          </motion.a>
-
-          <motion.a
-            href={"https://www.reddit.com/user/hanzlah_101"}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <RedditIcon />
-          </motion.a>
-
-          <motion.a
-            href={"https://github.com/hanzlah101"}
+            href={"https://github.com/ahmadhamza"}
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -190,16 +153,7 @@ const Navbar = () => {
 
             <nav className="flex items-center flex-wrap justify-center mt-2">
               <motion.a
-                href={"https://www.facebook.com/profile.php?id=100092311505914"}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                className="w-6 mx-1"
-              >
-                <FacebookIcon />
-              </motion.a>
-
-              <motion.a
-                href={"https://www.linkedin.com/in/hanzlah-javaid-43549126b/"}
+                href={"https://www.linkedin.com/in/ahmad-hamza-723629258/"}
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -209,33 +163,13 @@ const Navbar = () => {
               </motion.a>
 
               <motion.a
-                href={"https://www.instagram.com/hanzlah_101/"}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-6 mx-1"
-              >
-                <InstagramIcon />
-              </motion.a>
-
-              <motion.a
-                href={"https://github.com/hanzlah101"}
+                href={"https://github.com/ahmadhamza"}
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-6 mx-1 bg-light rounded-full dark:bg-dark"
               >
                 <GithubIcon />
-              </motion.a>
-
-              <motion.a
-                href={"https://www.reddit.com/user/hanzlah_101"}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-6 mx-1"
-              >
-                <RedditIcon />
               </motion.a>
 
               <button
@@ -259,7 +193,7 @@ const Navbar = () => {
         <Logo />
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

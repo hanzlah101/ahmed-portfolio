@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from "react"
+import { motion } from "framer-motion"
 
 const Skill = ({ name, x, y }) => {
   return (
@@ -12,8 +12,8 @@ const Skill = ({ name, x, y }) => {
     >
       {name}
     </motion.div>
-  );
-};
+  )
+}
 
 const Skills = () => {
   return (
@@ -29,23 +29,36 @@ const Skills = () => {
           Web
         </motion.div>
 
-        <Skill name={"NextJS"} x={"0vw"} y={"-20.4vw"} />
-        <Skill name={"Authentication"} x={"-34vw"} y={"-9vw"} />
-        <Skill name={"Authorization"} x={"34vw"} y={"-9vw"} />
-        <Skill name={"Prisma"} x={"23vw"} y={"16vw"} />
-        <Skill name={"ExpressJS"} x={"-23vw"} y={"16vw"} />
-        <Skill name={"MongoDB"} x={"16vw"} y={"-14vw"} />
-        <Skill name={"Tailwind CSS"} x={"-16vw"} y={"-14vw"} />
-        <Skill name={"Formik/Yup"} x={"-32vw"} y={"4vw"} />
-        <Skill name={"Mongoose"} x={"32vw"} y={"4vw"} />
-        <Skill name={"Javascript"} x={"0vw"} y={"13vw"} />
-        <Skill name={"Typescript"} x={"0vw"} y={"-12vw"} />
-        <Skill name={"CSS"} x={"-15vw"} y={"0vw"} />
-        <Skill name={"HTML"} x={"15vw"} y={"0vw"} />
-        <Skill name={"ReactJS"} x={"0vw"} y={"23vw"} />
+        {/* Frontend Skills */}
+        <Skill name={"TypeScript"} x={"0vw"} y={"-22vw"} />
+        <Skill name={"React"} x={"-18vw"} y={"-14vw"} />
+        <Skill name={"NextJS"} x={"18vw"} y={"-14vw"} />
+        <Skill name={"TailwindCSS"} x={"-28vw"} y={"-6vw"} />
+        <Skill name={"Framer Motion"} x={"28vw"} y={"-6vw"} />
+        <Skill name={"ShadcnUI"} x={"-32vw"} y={"4vw"} />
+        <Skill name={"RadixUI"} x={"32vw"} y={"4vw"} />
+        <Skill name={"Redux"} x={"-24vw"} y={"12vw"} />
+        <Skill name={"Zustand"} x={"24vw"} y={"12vw"} />
+        <Skill name={"Tanstack Query"} x={"-16vw"} y={"18vw"} />
+        <Skill name={"Zod"} x={"16vw"} y={"18vw"} />
+        <Skill name={"React Hook Form"} x={"0vw"} y={"22vw"} />
+
+        {/* Backend Skills */}
+        <Skill name={"NodeJS"} x={"-28vw"} y={"8vw"} />
+        <Skill name={"ExpressJS"} x={"28vw"} y={"8vw"} />
+        <Skill name={"Hono"} x={"-22vw"} y={"-10vw"} />
+        <Skill name={"NestJS"} x={"22vw"} y={"-10vw"} />
+        <Skill name={"TRPC"} x={"0vw"} y={"-14vw"} />
+        <Skill name={"MongoDB"} x={"-14vw"} y={"-8vw"} />
+        <Skill name={"PostgreSQL"} x={"14vw"} y={"-8vw"} />
+        <Skill name={"Prisma"} x={"-10vw"} y={"6vw"} />
+        <Skill name={"Drizzle ORM"} x={"10vw"} y={"6vw"} />
+        <Skill name={"SocketIO"} x={"0vw"} y={"12vw"} />
+        <Skill name={"Convex"} x={"-6vw"} y={"-18vw"} />
+        <Skill name={"Redis"} x={"6vw"} y={"-18vw"} />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

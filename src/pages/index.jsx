@@ -1,22 +1,22 @@
-import Layout from "../components/Layout";
-import Head from "next/head";
-import TransitionEffect from "../components/TransitionEffect";
-import Image from "next/image";
-import AnimatedText from "../components/AnimatedText";
-import Link from "next/link";
-import { LinkArrow } from "../components/Icons";
-import Hireme from "../components/Hireme";
-import ProfilePic from "../../public/images/profile/profile1.png";
-import BulbImg from "../../public/images/bulb_image.svg";
+import Layout from "../components/Layout"
+import Head from "next/head"
+import TransitionEffect from "../components/TransitionEffect"
+import Image from "next/image"
+import AnimatedText from "../components/AnimatedText"
+import Link from "next/link"
+import { LinkArrow } from "../components/Icons"
+import Hireme from "../components/Hireme"
+import ProfilePic from "../../public/images/profile/profile1.png"
+import BulbImg from "../../public/images/bulb_image.svg"
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Hanzlah&apos;s Portfolio | Home</title>
+        <title>Ahmad Hamza&apos;s Portfolio | Home</title>
         <meta
           name="description"
-          content="A fully responsive beautiful portfolio built with Next.js, tailwind css and framer motion."
+          content="Ahmad Hamza - Associate Software Engineer and React Native Developer specializing in web development. Building high-performance cross-platform applications."
         />
       </Head>
 
@@ -40,20 +40,21 @@ export default function Home() {
             <div className="w-1/2 lg:w-full flex flex-col items-center self-center lg:text-center">
               <AnimatedText
                 className="!text-5xl !text-left xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-4xl sm:!text-3xl !normal-case"
-                text="Hi I'm Hanzlah, a full stack web developer"
+                text="Hi I'm Ahmad Hamza, a full stack web developer"
               />
 
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                As a skilled full-stack developer, I am dedicated to turn ideas
-                and visions into innovative and responsive designs and then
-                making everything fully functional using complex logics and
-                apis. Explore my latest projects, showcasing my expertise in web
-                development.
+                A passionate and results-oriented Full Stack Web Developer with
+                over 2 years of professional experience. I specialize in
+                creating scalable web architectures, integrating complex APIs,
+                implementing modern UI/UX principles, and delivering
+                production-ready web applications. Explore my latest projects
+                showcasing my expertise in web development.
               </p>
 
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="mailto:hanzlahjavaid101@gmail.com"
+                  href="mailto:ahmaddev4u@gmail.com"
                   target="_blank"
                   download={true}
                   className="flex items-center transition-colors ease-linear duration-75 bg-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light text-light py-2.5 px-6 md:py-2 md:px-4 md:text-base rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-transparent hover:border-dark"
@@ -80,5 +81,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  );
+  )
 }

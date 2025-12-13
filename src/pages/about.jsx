@@ -1,44 +1,44 @@
-import React, { useEffect, useRef } from "react";
-import Head from "next/head";
-import AnimatedText from "../components/AnimatedText";
-import Layout from "../components/Layout";
-import Image from "next/image";
-import ProfileImg from "../../public/images/profile/me.png";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "../components/Skills";
-import TransitionEffect from "../components/TransitionEffect";
+import React, { useEffect, useRef } from "react"
+import Head from "next/head"
+import AnimatedText from "../components/AnimatedText"
+import Layout from "../components/Layout"
+import Image from "next/image"
+import ProfileImg from "../../public/images/profile/me.png"
+import { useInView, useMotionValue, useSpring } from "framer-motion"
+import Skills from "../components/Skills"
+import TransitionEffect from "../components/TransitionEffect"
 
 const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef(null)
+  const motionValue = useMotionValue(0)
+  const springValue = useSpring(motionValue, { duration: 3000 })
+  const isInView = useInView(ref, { once: true })
 
   useEffect(() => {
     if (isInView) {
-      motionValue.set(value);
+      motionValue.set(value)
     }
-  }, [isInView, value, motionValue]);
+  }, [isInView, value, motionValue])
 
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
+        ref.current.textContent = latest.toFixed(0)
       }
-    });
-  }, [springValue, value]);
+    })
+  }, [springValue, value])
 
-  return <span ref={ref}></span>;
-};
+  return <span ref={ref}></span>
+}
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>Hanzlah&apos;s Portfolio | About</title>
+        <title>Ahmad Hamza&apos;s Portfolio | About</title>
         <meta
           name="description"
-          content="About me, my experience, expertise and skills."
+          content="About Ahmad Hamza, Associate Software Engineer with 2+ years of experience in full stack web development."
         />
       </Head>
 
@@ -58,25 +58,28 @@ export default function About() {
               </h2>
 
               <p className="font-medium">
-                Hi, I&apos;m <span className="font-bold">Hanzlah Javaid</span>,
-                a full stack web developer with a passion for creating
-                beautiful, responsive, completely functional, and feature rich
-                experiences. With over a year of experience in the field, I am
-                always looking for new and innovative ways to bring my
-                clients&apos; visions to life.
+                Hi, I&apos;m <span className="font-bold">Ahmad Hamza</span>, an
+                Associate Software Engineer and passionate Full Stack Web
+                Developer with over 2 years of professional experience in
+                building high-performance web applications. I am dedicated to
+                turning ideas and visions into innovative, responsive, and fully
+                functional web experiences.
               </p>
 
               <p className="font-medium my-4">
-                I believe that design is more than just making things look
-                pretty, it&apos;s about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                I specialize in creating scalable web architectures, integrating
+                complex APIs, implementing modern UI/UX principles, and
+                optimizing application performance. I believe that great web
+                development is about solving real problems and creating
+                intuitive, enjoyable experiences for users.
               </p>
 
               <p className="font-medium">
-                But compiling that beautiful design with complex logics and
-                making everything functional is another key task.
-                Authentication, authorization, payment integrations and bunch of
-                other features are the basic needs of any kind of website today.
+                With strong experience working in agile team environments, I
+                collaborate closely with designers and backend engineers to
+                deliver solutions for both startup and enterprise clients. My
+                expertise spans the entire development lifecycle from UI design
+                to backend integration and deployment.
               </p>
             </div>
 
@@ -96,7 +99,7 @@ export default function About() {
             <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-center gap-y-24 gap-x-4 md:order-3">
               <div className="flex flex-col items-end xl:items-center justify-center">
                 <span className="inline-block md:text-6xl sm:text-5xl xs:text-4xl text-7xl font-bold">
-                  <AnimatedNumbers value={10} />+
+                  <AnimatedNumbers value={8} />+
                 </span>
                 <h2 className="text-xl xl:text-center md:text-base sm:text-sm font-medium capitalize dark:text-light/75 text-dark/75">
                   Projects Completed
@@ -105,7 +108,7 @@ export default function About() {
 
               <div className="flex flex-col items-end xl:items-center justify-center">
                 <span className="inline-block md:text-6xl sm:text-5xl xs:text-4xl text-7xl font-bold">
-                  <AnimatedNumbers value={16} />+
+                  <AnimatedNumbers value={24} />+
                 </span>
                 <h2 className="text-lg xl:text-center md:text-base sm:text-sm font-medium capitalize dark:text-light/75 text-dark/75">
                   Months Of Experience
@@ -113,9 +116,110 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          {/* Experience Section */}
+          <div className="w-full mt-32 mb-16">
+            <AnimatedText
+              text={"Experience"}
+              className="mb-16 lg:!text-6xl sm:!text-5xl xs:!text-4xl"
+            />
+
+            <div className="w-full flex flex-col items-center justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="border-l-2 border-dark dark:border-light pl-6 md:pl-4 relative">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 bg-dark dark:bg-light rounded-full"></div>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl md:text-xl font-bold mb-2">
+                      Full Stack Web Developer
+                    </h3>
+                    <div className="flex items-center gap-2 mb-3 text-sm md:text-xs">
+                      <span className="font-semibold text-primary dark:text-primaryDark">
+                        Devminified
+                      </span>
+                      <span className="text-dark/75 dark:text-light/75">•</span>
+                      <span className="text-dark/75 dark:text-light/75">
+                        June 2024 – Present
+                      </span>
+                    </div>
+                    <p className="font-medium text-dark/75 dark:text-light/75 mb-4">
+                      Leading end-to-end development of multiple full-scale web
+                      applications, working across the entire development
+                      lifecycle from UI design to backend integration and
+                      deployment.
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-dark/75 dark:text-light/75 font-medium ml-4">
+                      <li>
+                        Led end-to-end development of multiple full-scale web
+                        applications
+                      </li>
+                      <li>
+                        Integrated Firebase, AWS Cognito, and AWS Amplify for
+                        secure authentication and real-time data handling
+                      </li>
+                      <li>
+                        Optimized web application performance and ensured
+                        consistent, pixel-perfect cross-platform UI/UX
+                      </li>
+                      <li>
+                        Collaborated with UI/UX designers and backend developers
+                        to deliver user-centric, high-quality web products
+                      </li>
+                      <li>
+                        Delivered production-ready web applications for both
+                        startup and enterprise clients
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="absolute -left-[9px] bottom-0 w-4 h-4 bg-dark dark:bg-light rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Education Section */}
+          <div className="w-full mt-16 mb-16">
+            <AnimatedText
+              text={"Education"}
+              className="mb-16 lg:!text-6xl sm:!text-5xl xs:!text-4xl"
+            />
+
+            <div className="w-full flex flex-col items-center justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="border-l-2 border-dark dark:border-light pl-6 md:pl-4 relative">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 bg-dark dark:bg-light rounded-full"></div>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl md:text-xl font-bold mb-2">
+                      Bachelor of Science in Computer Science
+                    </h3>
+                    <div className="flex items-center gap-2 mb-3 text-sm md:text-xs">
+                      <span className="font-semibold text-primary dark:text-primaryDark">
+                        University of Engineering and Technology (UET), Lahore
+                      </span>
+                      <span className="text-dark/75 dark:text-light/75">•</span>
+                      <span className="text-dark/75 dark:text-light/75">
+                        September 2020 – May 2024
+                      </span>
+                    </div>
+                    <p className="font-medium text-dark/75 dark:text-light/75">
+                      Completed undergraduate studies in Computer Science,
+                      gaining strong foundation in software engineering,
+                      algorithms, data structures, and web development
+                      principles.
+                    </p>
+                  </div>
+
+                  <div className="absolute -left-[9px] bottom-0 w-4 h-4 bg-dark dark:bg-light rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Skills />
         </Layout>
       </main>
     </>
-  );
+  )
 }
