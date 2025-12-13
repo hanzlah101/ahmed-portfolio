@@ -22,8 +22,12 @@ const AnimatedNumbers = ({ value }) => {
 
   useEffect(() => {
     springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0)
+      if (ref.current && latest <= value) {
+        if (value % 1 !== 0) {
+          ref.current.textContent = latest.toFixed(1)
+        } else {
+          ref.current.textContent = latest.toFixed(0)
+        }
       }
     })
   }, [springValue, value])
@@ -60,7 +64,7 @@ export default function About() {
               <p className="font-medium">
                 Hi, I&apos;m <span className="font-bold">Ahmad Hamza</span>, an
                 Associate Software Engineer and passionate Full Stack Web
-                Developer with over 2 years of professional experience in
+                Developer with over 3.5 years of professional experience in
                 building high-performance web applications. I am dedicated to
                 turning ideas and visions into innovative, responsive, and fully
                 functional web experiences.
@@ -88,7 +92,7 @@ export default function About() {
               <Image
                 src={ProfileImg}
                 alt="profile_image"
-                className="w-full h-auto rounded-2xl"
+                className="w-full max-h-[600px] h-auto object-cover rounded-2xl"
                 priority
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
@@ -108,10 +112,10 @@ export default function About() {
 
               <div className="flex flex-col items-end xl:items-center justify-center">
                 <span className="inline-block md:text-6xl sm:text-5xl xs:text-4xl text-7xl font-bold">
-                  <AnimatedNumbers value={24} />+
+                  <AnimatedNumbers value={3.5} />+
                 </span>
                 <h2 className="text-lg xl:text-center md:text-base sm:text-sm font-medium capitalize dark:text-light/75 text-dark/75">
-                  Months Of Experience
+                  Years Of Experience
                 </h2>
               </div>
             </div>
@@ -168,6 +172,72 @@ export default function About() {
                       <li>
                         Delivered production-ready web applications for both
                         startup and enterprise clients
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl md:text-xl font-bold mb-2">
+                      Full Stack Developer
+                    </h3>
+                    <div className="flex items-center gap-2 mb-3 text-sm md:text-xs">
+                      <span className="font-semibold text-primary dark:text-primaryDark">
+                        Bravt Cloud
+                      </span>
+                      <span className="text-dark/75 dark:text-light/75">•</span>
+                      <span className="text-dark/75 dark:text-light/75">
+                        November 2024 – May 2025
+                      </span>
+                    </div>
+                    <p className="font-medium text-dark/75 dark:text-light/75 mb-4">
+                      Developed the frontend and backend of a cloud hosting
+                      platform with full ownership after team transitions.
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-dark/75 dark:text-light/75 font-medium ml-4">
+                      <li>
+                        Delivered core features and maintained project
+                        continuity under tight deadlines
+                      </li>
+                      <li>
+                        Troubleshot critical issues, optimized performance, and
+                        improved platform reliability
+                      </li>
+                      <li>
+                        Collaborated with team members and maintained quality
+                        through reviews and iterative improvements
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl md:text-xl font-bold mb-2">
+                      Full Stack Developer
+                    </h3>
+                    <div className="flex items-center gap-2 mb-3 text-sm md:text-xs">
+                      <span className="font-semibold text-primary dark:text-primaryDark">
+                        Zircon
+                      </span>
+                      <span className="text-dark/75 dark:text-light/75">•</span>
+                      <span className="text-dark/75 dark:text-light/75">
+                        April 2023 – December 2023
+                      </span>
+                    </div>
+                    <p className="font-medium text-dark/75 dark:text-light/75 mb-4">
+                      Developed a complete perfume e-commerce store with product
+                      listings, search, cart, and checkout flows.
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-dark/75 dark:text-light/75 font-medium ml-4">
+                      <li>
+                        Implemented a clean, intuitive UI with optimized
+                        frontend performance
+                      </li>
+                      <li>
+                        Integrated backend APIs and designed smooth user
+                        navigation and shopping experience
+                      </li>
+                      <li>
+                        Ensured reliability through debugging, performance
+                        tuning, and architectural improvements
                       </li>
                     </ul>
                   </div>
