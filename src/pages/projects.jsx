@@ -118,10 +118,10 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Ahmad Hamza&apos;s Portfolio | Projects</title>
+        <title>Hanzlah&apos;s Portfolio | Projects</title>
         <meta
           name="description"
-          content="Web development projects showcasing expertise in full stack development."
+          content="My experience and expertise into action."
         />
       </Head>
 
@@ -134,103 +134,80 @@ const Projects = () => {
             text={"Imagination Trumps Knowledge!"}
           />
 
+          <Toast
+            message={
+              <div>
+                Demo credentials for every site are
+                <br />
+                <span className="font-bold mx-1">Email:</span>
+                john@gmail.com
+                <br />
+                <span className="font-bold mx-1">Password:</span>123456
+              </div>
+            }
+          />
+
           <div className="grid grid-cols-12 gap-x-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="OnlineCook"
-                summary="A large-scale cooking platform featuring video recipes, reels, and chef profiles. Built with Next.js, TypeScript, and modern web technologies. Includes user authentication, video streaming, recipe management, and social features for following favorite chefs."
-                type="Featured Project - Ongoing"
-                link={"#"}
-                github={"#"}
+                title="Full stack twitter clone"
+                summary="A feature-rich twitter clone named zwitter built with Next JS. Everything is completely functional and UI is completely responsive. Key features include photo, video and gif separation/filtration, emoji, authentication, authoriation, ability to create, like unlike, create and delete comment, bookmark and delete the post. Trending posts, friend suggestions, follow unfollow, live search bar and bunch of other features are also added."
+                type="Featured Project"
+                link={"https://zwitter-six.vercel.app/"}
+                github={"https://github.com/hanzlah101/zwitter"}
                 img={Project1}
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="FVN eLearning"
-                summary="Online education platform featuring video courses, quizzes, and AI chatbot support for student assistance."
-                type="Full Stack Web App"
-                link={"#"}
-                github={"#"}
+                title="Full stack netflix clone"
+                type="Full stack Project"
+                link={"https://netflix-eosin-nine.vercel.app/"}
+                github={"https://github.com/hanzlah101/netflix"}
                 img={Project3}
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Hareth Optics"
-                summary="E-commerce web application for eyewear products with custom cart functionality and secure checkout flow."
-                type="E-Commerce Web App"
-                link={"#"}
-                github={"#"}
+                title="Google Clone Project"
+                type="Next JS Project"
+                link={"https://google-clone-olive-eight.vercel.app"}
+                github={"https://github.com/hanzlah101/google-clone"}
                 img={Project6}
               />
             </div>
 
             <div className="col-span-12">
               <FeaturedProject
-                title="BTA Supports"
-                summary="NFL team match predictions and score analytics web application. Features real-time data updates, prediction algorithms, statistical analysis, and comprehensive match tracking. Built with React, Node.js, and data visualization libraries."
+                title="Full stack airbnb clone"
+                summary="A full stack airbnb clone built with Next JS. A very complex search and filtering system is added. Key features include create and delete, favourite and unfavourite and reserve a property. You can also filter my properties, trips and reservations and much more."
                 type="Featured Project"
-                link={"#"}
-                github={"#"}
+                link={"https://airbnb-gh0qffdlg-hanzlah101.vercel.app/"}
+                github={"https://github.com/hanzlah101/airbnb"}
                 img={Project2}
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="GenFit"
-                summary="Daily workout planner and trainer-tracking web application with progress monitoring and personalized fitness plans."
-                type="Fitness Web App"
-                link={"#"}
-                github={"#"}
+                title="React JS portfolio"
+                type="React JS project"
+                link={"https://portfolio-223vbsv6q-hanzlah101.vercel.app/"}
+                github={"https://github.com/hanzlah101/portfolio"}
                 img={Project4}
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="E-Snapp"
-                summary="Energy consumption tracking web app with bill forecasting and smart usage reports. Features data analytics, predictive modeling, and detailed consumption insights."
-                type="Analytics Web App"
-                link={"#"}
-                github={"#"}
+                title="React JS restraunt website"
+                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+                type="React JS Project"
+                link={"https://restraunt-silk.vercel.app/"}
+                github={"https://github.com/hanzlah101/restraunt"}
                 img={Project5}
-              />
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Ever After"
-                summary="Asset management and family communication web platform for post-life estate handling with secure document management."
-                type="Enterprise Web App"
-                link={"#"}
-                github={"#"}
-                img={Project1}
-              />
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Injustice PA"
-                summary="Legal services web application connecting clients with lawyers via chat and video calls. Includes appointment scheduling and case management features."
-                type="Service Platform"
-                link={"#"}
-                github={"#"}
-                img={Project3}
-              />
-            </div>
-
-            <div className="col-span-12">
-              <FeaturedProject
-                title="Trucking App"
-                summary="Driver hiring and logistics platform with chatbot integration. Features driver matching, route optimization, real-time tracking, and automated logistics management. Built with modern web stack including real-time communication protocols."
-                type="Featured Project"
-                link={"#"}
-                github={"#"}
-                img={Project2}
               />
             </div>
           </div>
