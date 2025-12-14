@@ -24,8 +24,8 @@ export default function Home() {
 
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
-          <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-[44%] lg:w-[70%] lg:inline-block md:w-full">
+          <div className="flex items-center justify-center gap-14 w-full lg:flex-col">
+            <div className="w-[30%] lg:w-[70%] lg:inline-block md:w-full">
               <Image
                 src={ProfilePic}
                 alt="profile_image"
